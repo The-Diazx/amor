@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Para você 💜</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="app">
+
+        <!-- TELA 1: Pergunta inicial -->
+        <section class="screen active" id="screen-1">
+            <div class="content-center">
+                <h1 class="type-text" id="text-1"></h1>
+                <p class="hint-text" id="hint-1"></p>
+                <div class="btn-group hidden" id="actions-1">
+                    <button class="pill-btn" id="btn-yes">Sim</button>
+                    <button class="pill-btn" id="btn-no">Não, quero descobrir...</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TELA 2: Meu dia sem você -->
+        <section class="screen" id="screen-2">
+            <div class="content-center">
+                <h1 class="type-text" id="text-2"></h1>
+                <button class="circle-btn hidden" id="next-2" aria-label="Avançar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- TELA 3: Desenho estilo Paint (dia chuvoso / flor murcha) -->
+        <section class="screen" id="screen-3">
+            <div class="content-center">
+                <div class="paint-card">
+                    <svg viewBox="0 0 260 330" class="paint-svg" aria-label="Desenho de dia chuvoso com flor murcha">
+                        <!-- Nuvem azul escura -->
+                        <path
+                            d="M168 48 C163 32, 188 26, 198 38 C208 24, 236 30, 234 48 C248 52, 248 74, 232 78 C228 90, 206 90, 198 82 C188 90, 166 88, 164 76 C150 72, 152 52, 168 48 Z"
+                            fill="none" stroke="#1e3a8a" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+
+                        <!-- Raios amarelos -->
+                        <polyline points="182,86 174,104 185,104 176,122" fill="none" stroke="#eab308"
+                            stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <polyline points="214,86 206,104 217,104 208,122" fill="none" stroke="#eab308"
+                            stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+
+                        <!-- Gotas de chuva -->
+                        <g stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round">
+                            <line x1="162" y1="105" x2="162" y2="117" />
+                            <line x1="162" y1="132" x2="162" y2="144" />
+                            <line x1="162" y1="160" x2="162" y2="172" />
+                            <line x1="162" y1="188" x2="162" y2="200" />
+
+                            <line x1="186" y1="132" x2="186" y2="144" />
+                            <line x1="186" y1="160" x2="186" y2="172" />
+                            <line x1="186" y1="188" x2="186" y2="200" />
+                            <line x1="186" y1="215" x2="186" y2="227" />
+
+                            <line x1="208" y1="132" x2="208" y2="144" />
+                            <line x1="208" y1="160" x2="208" y2="172" />
+                            <line x1="208" y1="188" x2="208" y2="200" />
+
+                            <line x1="230" y1="100" x2="230" y2="112" />
+                            <line x1="230" y1="128" x2="230" y2="140" />
+                            <line x1="230" y1="156" x2="230" y2="168" />
+                            <line x1="230" y1="184" x2="230" y2="196" />
+                            <line x1="230" y1="212" x2="230" y2="224" />
+                        </g>
+
+                        <!-- Grama -->
+                        <polyline
+                            points="12,285 24,274 36,286 48,274 60,286 72,275 84,286 96,274 108,286 120,275 132,286 144,274 156,286 168,275 180,286 192,274 204,286 216,275 228,286 240,274 250,285"
+                            fill="none" stroke="#22c55e" stroke-width="3.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+
+                        <!-- Caule murcho -->
+                        <path d="M58 282 C54 255, 58 232, 74 234 C82 235, 86 242, 86 248" fill="none" stroke="#16a34a"
+                            stroke-width="3.5" stroke-linecap="round" />
+                        <!-- Folhinhas caídas -->
+                        <path d="M57 265 C46 262, 42 268, 49 272 C53 274, 57 269, 57 265 Z" fill="none" stroke="#16a34a"
+                            stroke-width="3" stroke-linejoin="round" />
+                        <path d="M59 258 C68 254, 73 259, 67 264 C63 266, 59 262, 59 258 Z" fill="none" stroke="#16a34a"
+                            stroke-width="3" stroke-linejoin="round" />
+
+                        <!-- Flor vermelha murcha -->
+                        <path
+                            d="M84 246 C94 242, 102 250, 96 258 C92 254, 88 256, 86 262 C82 256, 78 258, 75 262 C72 254, 77 248, 84 246 Z"
+                            fill="none" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <button class="circle-btn" id="next-3" aria-label="Avançar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- TELA 4: Meu dia com você -->
+        <section class="screen" id="screen-4">
+            <div class="content-center">
+                <h1 class="type-text" id="text-4"></h1>
+                <button class="circle-btn hidden" id="next-4" aria-label="Avançar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- TELA 5: Desenho estilo Paint (sol sorrindo, árvore e flor aberta) -->
+        <section class="screen" id="screen-5">
+            <div class="content-center">
+                <div class="paint-card">
+                    <svg viewBox="0 0 260 330" class="paint-svg"
+                        aria-label="Desenho de dia ensolarado com árvore e flor">
+                        <!-- Nuvem azul clara -->
+                        <path
+                            d="M52 65 C48 52, 68 46, 76 56 C85 44, 108 48, 108 62 C122 60, 134 72, 126 84 C118 92, 98 90, 90 84 C80 92, 58 90, 52 80 C40 78, 42 66, 52 65 Z"
+                            fill="none" stroke="#3b82f6" stroke-width="3.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+
+                        <!-- Sol sorrindo no canto superior direito -->
+                        <path d="M212 12 C205 42, 224 64, 250 60" fill="none" stroke="#facc15" stroke-width="4"
+                            stroke-linecap="round" />
+                        <!-- Raios do sol -->
+                        <g stroke="#facc15" stroke-width="3.5" stroke-linecap="round">
+                            <line x1="198" y1="22" x2="180" y2="18" />
+                            <line x1="202" y1="42" x2="184" y2="48" />
+                            <line x1="214" y1="58" x2="202" y2="74" />
+                            <line x1="232" y1="66" x2="228" y2="85" />
+                            <line x1="248" y1="68" x2="250" y2="86" />
+                        </g>
+                        <!-- Olhos e sorriso do sol -->
+                        <circle cx="226" cy="28" r="2.5" fill="#2563eb" />
+                        <circle cx="239" cy="26" r="2.5" fill="#2563eb" />
+                        <path d="M225 40 C230 48, 241 47, 245 38" fill="none" stroke="#ef4444" stroke-width="3"
+                            stroke-linecap="round" />
+
+                        <!-- Tronco da árvore -->
+                        <path d="M68 278 C72 252, 72 228, 70 210 M92 278 C88 252, 88 228, 90 210" fill="none"
+                            stroke="#78350f" stroke-width="4" stroke-linecap="round" />
+                        <!-- Copa da árvore -->
+                        <path
+                            d="M52 208 C32 205, 28 176, 46 168 C42 146, 68 134, 84 146 C102 134, 128 148, 122 170 C138 178, 134 206, 112 208 C98 214, 66 214, 52 208 Z"
+                            fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <!-- Frutinhas na árvore -->
+                        <circle cx="62" cy="172" r="2.5" fill="#ef4444" />
+                        <circle cx="84" cy="160" r="2.5" fill="#ef4444" />
+                        <circle cx="104" cy="176" r="2.5" fill="#ef4444" />
+                        <circle cx="78" cy="190" r="2.5" fill="#ef4444" />
+
+                        <!-- Flor aberta -->
+                        <line x1="194" y1="280" x2="194" y2="218" stroke="#22c55e" stroke-width="3.5"
+                            stroke-linecap="round" />
+                        <path d="M194 254 C180 246, 174 254, 184 260 C189 262, 194 258, 194 254 Z" fill="none"
+                            stroke="#22c55e" stroke-width="3" stroke-linejoin="round" />
+                        <path d="M194 248 C208 240, 214 248, 204 254 C199 256, 194 252, 194 248 Z" fill="none"
+                            stroke="#22c55e" stroke-width="3" stroke-linejoin="round" />
+
+                        <!-- Pétalas vermelhas -->
+                        <g fill="none" stroke="#ef4444" stroke-width="3.5" stroke-linejoin="round">
+                            <circle cx="194" cy="186" r="9" />
+                            <circle cx="211" cy="195" r="9" />
+                            <circle cx="211" cy="213" r="9" />
+                            <circle cx="194" cy="222" r="9" />
+                            <circle cx="177" cy="213" r="9" />
+                            <circle cx="177" cy="195" r="9" />
+                        </g>
+                        <!-- Miolo amarelo -->
+                        <circle cx="194" cy="204" r="9" fill="#facc15" stroke="#eab308" stroke-width="2" />
+
+                        <!-- Grama -->
+                        <path d="M10 282 Q 35 274, 60 282 T 110 282 T 160 282 T 210 282 T 252 280" fill="none"
+                            stroke="#22c55e" stroke-width="4" stroke-linecap="round" />
+                    </svg>
+                </div>
+
+                <button class="circle-btn" id="next-5" aria-label="Avançar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- TELA 6: Final interativo com foto do casal -->
+        <section class="screen" id="screen-6">
+            <div class="content-center finale-container">
+                <h1 class="type-text finale-title" id="text-6"></h1>
+
+                <div class="photo-wrapper">
+                    <img src="foto.jpg.JPEG" alt="Nossa foto" class="couple-photo" />
+                    <div class="love-banner" id="love-banner">
+                        <span>MUITOOOO 🥰</span>
+                    </div>
+                </div>
+
+                <div class="meter-controls">
+                    <button class="emoji-btn" id="btn-dislike" aria-label="Diminuir">💔</button>
+                    <span class="percentage-label" id="percentage-text">0%</span>
+                    <button class="emoji-btn" id="btn-like" aria-label="Aumentar">❤️</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="hearts-layer" id="hearts-layer" aria-hidden="true"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
